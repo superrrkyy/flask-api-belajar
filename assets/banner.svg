@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f0c29"/><stop offset=".55" stop-color="#302b63"/><stop offset="1" stop-color="#3b2a0a"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" x2="1">
+      <stop offset="0" stop-color="#c4b5fd"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#facc15"/>
+    </linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#7c3aed" stop-opacity=".5"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow2"><stop offset="0" stop-color="#facc15" stop-opacity=".28"/><stop offset="1" stop-color="#facc15" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <circle cx="300" cy="160" r="220" fill="url(#glow)"><animate attributeName="r" values="200;250;200" dur="6s" repeatCount="indefinite"/></circle>
+  <circle cx="950" cy="160" r="200" fill="url(#glow2)"><animate attributeName="r" values="230;180;230" dur="7s" repeatCount="indefinite"/></circle>
+
+  <!-- key icon -->
+  <g transform="translate(170 110)">
+    <animateTransform attributeName="transform" type="rotate" values="-8 50 50;8 50 50;-8 50 50" dur="4s" repeatCount="indefinite" additive="sum"/>
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#facc15" stroke-width="12"/>
+    <circle cx="50" cy="50" r="12" fill="#facc15"/>
+    <path d="M90 50 H190 M150 50 V78 M175 50 V70" stroke="#facc15" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <text x="640" y="130" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="78" font-weight="800" letter-spacing="3" fill="url(#txt)">Flask API</text>
+  <text x="640" y="175" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="24" fill="#c4b5fd" letter-spacing="3">REST API • API Key • SQLite</text>
+
+  <!-- request / response -->
+  <g font-family="Consolas, Menlo, monospace" font-size="18">
+    <g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="6s" repeatCount="indefinite"/>
+      <rect x="470" y="215" width="190" height="40" rx="12" fill="#1f2937"/>
+      <text x="488" y="241" fill="#4ade80">GET</text><text x="535" y="241" fill="#e5e7eb">/items</text></g>
+    <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.3;.4;.85;1" dur="6s" repeatCount="indefinite"/>
+      <rect x="680" y="215" width="150" height="40" rx="12" fill="#422006"/>
+      <text x="698" y="241" fill="#facc15">200 OK ✓</text></g>
+  </g>
+</svg>
