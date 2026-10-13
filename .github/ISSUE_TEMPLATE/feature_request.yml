@@ -1,0 +1,32 @@
+name: ✨ Usulan fitur
+description: Usulkan ide atau peningkatan
+title: "[Fitur] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: masalah
+    attributes:
+      label: Masalah yang ingin dipecahkan
+      placeholder: Saya sering kesulitan ketika ...
+    validations:
+      required: true
+  - type: textarea
+    id: solusi
+    attributes:
+      label: Usulan solusi
+      placeholder: Alangkah baiknya jika ...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatif
+    attributes:
+      label: Alternatif yang sudah dipertimbangkan
+    validations:
+      required: false
+  - type: checkboxes
+    id: kesediaan
+    attributes:
+      label: Kesediaan membantu
+      options:
+        - label: Saya bersedia mengirim Pull Request untuk fitur ini
+          required: false

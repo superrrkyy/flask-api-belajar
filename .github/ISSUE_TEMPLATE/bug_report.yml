@@ -1,0 +1,48 @@
+name: 🐞 Laporan bug
+description: Laporkan sesuatu yang tidak berjalan semestinya
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih sudah meluangkan waktu! Isi sedetail mungkin agar cepat ditindaklanjuti.
+        **Untuk masalah keamanan, jangan pakai form ini — ikuti [SECURITY.md](../blob/main/SECURITY.md).**
+  - type: textarea
+    id: apa-yang-terjadi
+    attributes:
+      label: Apa yang terjadi?
+      description: Jelaskan perilaku yang salah.
+    validations:
+      required: true
+  - type: textarea
+    id: langkah
+    attributes:
+      label: Langkah reproduksi
+      placeholder: |
+        1. Buka halaman ...
+        2. Klik ...
+        3. Lihat error ...
+    validations:
+      required: true
+  - type: input
+    id: harapan
+    attributes:
+      label: Yang diharapkan
+      placeholder: Seharusnya menampilkan ...
+    validations:
+      required: true
+  - type: input
+    id: lingkungan
+    attributes:
+      label: Lingkungan
+      placeholder: "Chrome 130 di Android 14 / Node 20.11 / Windows 11"
+    validations:
+      required: false
+  - type: textarea
+    id: tangkapan
+    attributes:
+      label: Tangkapan layar / log
+      description: Seret gambar ke sini, atau tempel isi konsol/terminal.
+    validations:
+      required: false
